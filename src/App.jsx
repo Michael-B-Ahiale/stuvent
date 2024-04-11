@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -12,6 +13,7 @@ function App() {
     if(!currentUser){
       return<Navigate to= '/Login'/>
     }
+    return children
   }
   return (
       <Router>
